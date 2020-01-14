@@ -7,7 +7,11 @@ class Administrator::EventsController < ApplicationController
 
   def create
     @event = current_user.events.create(event_params)
-    redirect_to administrator_event_path(@event)
+    if @event.valid?
+      redirect_to administrator_event_path(@event)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show

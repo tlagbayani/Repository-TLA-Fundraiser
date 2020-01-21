@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show]
   namespace :administrator do
     resources :events, only: [:new, :create, :show]
+    resources :photos, only: [:create]
   end
 end

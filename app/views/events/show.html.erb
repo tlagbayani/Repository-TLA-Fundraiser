@@ -1,0 +1,29 @@
+
+<br />
+
+<div class="booyah-box col-10 offset-1">
+  <h1><%= @event.title %></h1>
+  <% unless @event.photo.url.nil? %>
+    <%= image_tag @event.photo.url, class: 'img-fluid' %>
+  <% end %>
+  <br />
+  <div class="row">
+    <div class="col-sm-4 col-12" text-center>
+      <span class="badge badge-default">
+        <%= number_to_currency @event.cost %>
+        <%= ' per guest' %>
+      </span>   
+
+      <% if current_user && current_user == @event.user %>
+        <br />
+        <br />
+        <%= link_to 'Manage', administrator_event_path(@event), class: 'btn btn-danger btn-large' %>
+      <% end %>
+
+    </div>
+
+    <div class="col-sm-8 col-12">
+      <%= @event.description %>
+    </div>
+  </div>
+</div>

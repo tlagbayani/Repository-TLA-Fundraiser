@@ -5,14 +5,19 @@
   <hr />
 
   <% @events.each do |event| %>
-    <h2 class="text-center"><%= event.title %></h2>
+    <h2 class="text-center">
+      <%= link_to event.title, event_path(event) %>
+    </h2>
+      <% unless event.photo.url.nil? %>
+        <%= image_tag event.photo.url, class: 'img-fluid' %>
+      <% end %>
     <br />
     <div class="row">
       <div class="col-sm-8 col-12">
         <%= event.description %>
       </div>
       <div class="col-sm-4 col-12 text-center">
-        <%= link_to 'Button', '#', class: 'btn btn-primary btn-large' %>
+        <%= link_to 'More Details...', event_path(event), class: 'btn btn-primary btn-large' %>
       </div>
     </div>
     <br class="clr" />

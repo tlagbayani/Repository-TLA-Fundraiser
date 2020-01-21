@@ -2,4 +2,7 @@
 <br />
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= @event.title %></h1>
+  <% unless @event.photo.url.nil? %>
+    <%= image_tag @event.photo.url, class: 'img-fluid' %>
+  <% end %>
 </div>

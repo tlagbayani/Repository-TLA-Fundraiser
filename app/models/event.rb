@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  mount_uploader :photo, PictureUploader
+
   belongs_to :user
 
   validates :title, presence: true

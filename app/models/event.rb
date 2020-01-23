@@ -2,6 +2,7 @@ class Event < ApplicationRecord
   mount_uploader :photo, PictureUploader
 
   belongs_to :user
+  has_many :guests
 
   validates :title, presence: true
   validates :description, presence: true

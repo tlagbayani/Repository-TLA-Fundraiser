@@ -28,12 +28,12 @@
   </div>
 </div>
 <div class="clr"></div>
+<div class="centro text-center"> 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Register Now
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" %>
+  Click Here to Join this Event
 </button>
-
-<!-- Modal -->
+</div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -50,7 +50,7 @@
           <%= f.input :number_of_guest %>       
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
           <%= f.submit "Register Now", class: 'btn btn-primary' %>
         </div>
       <% end %>
@@ -58,5 +58,8 @@
     </div>
   </div>
 </div>
-
-<h1>Guests</h1>
+<div class="row feature text-center">
+  <div class="col-12 col-sm">
+    <h1>Support This Good Cause</h1>
+  </div>
+</div>

@@ -84,3 +84,4 @@ gem 'fog-aws'
 gem 'stripe'
 
 gem "nokogiri", ">= 1.10.8"
+gem "actionview", ">= 5.2.4.2"
